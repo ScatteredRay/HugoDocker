@@ -10,3 +10,5 @@ RUN ["/hugo", "version"]
 FROM alpine:latest
 
 COPY --from=builder /hugo .
+RUN ["/hugo", "version"]
+ENV PATH="/:${PATH}"
